@@ -14,6 +14,11 @@ public interface ApiRequest {
     @GET("Login.php")
     Call<ResponseDataModel> Login(@Query("pseudo") String pseudo);
 
+    /******************** All Pharmacies*******************/
+    @GET("AllPharmacies.php")
+    Call<ResponseDataModel> getPharmacies();
+
+
 
     /*************** Inscrire *******************/
     @FormUrlEncoded
@@ -24,5 +29,23 @@ public interface ApiRequest {
             @Field("email") String email,
             @Field("pseudo") String pseudo,
             @Field("password") String password
+    );
+
+    /*************** Upload Ordonnance *******************/
+    @FormUrlEncoded
+    @POST("uploadOrdonnance.php")
+    Call<ResponseDataModel> UploadOrdonnance(
+            @Field("titre") String titre,
+            @Field("image") String image,
+            @Field("id") String idUtilisateur
+    );
+
+    /*************** Demande Conseil *******************/
+    @FormUrlEncoded
+    @POST("DemandeConseil.php")
+    Call<ResponseDataModel> DemandeConseil(
+            @Field("id_utilisateur") String id_utilisateur,
+            @Field("id_pharmacien") String id_pharmacien,
+            @Field("question") String question
     );
 }

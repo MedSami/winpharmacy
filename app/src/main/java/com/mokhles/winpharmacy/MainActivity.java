@@ -19,14 +19,17 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
 EditText edtPseudo,edtPassword;
 Button btnEntrer,btnInscrire;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         edtPseudo=findViewById(R.id.edtPseudo);
         edtPassword=findViewById(R.id.edtPassword);
-
+        edtPseudo.setText("MSami");
+        edtPassword.setText("sami123");
         btnEntrer=findViewById(R.id.btnEntrer);
         btnInscrire=findViewById(R.id.btnInscrire);
         btnEntrer.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +52,7 @@ Button btnEntrer,btnInscrire;
 
 
                                         Intent intent=new Intent(MainActivity.this,MenuPrincipal.class);
-                                        intent.putExtra("idEmploye",""+response.body().getResult().get(0).getId());
+                                        intent.putExtra("idUtilisateur",""+response.body().getResult().get(0).getId());
                                         startActivity(intent);
 
 
