@@ -33,7 +33,6 @@ Button btnEnvoyer;
             idUtilisateur=data.getString("idUtilisateur");
 
         }
-        Toast.makeText(this, idPharmacien+"-"+idUtilisateur, Toast.LENGTH_SHORT).show();
 
         btnEnvoyer.setOnClickListener(new View.OnClickListener() {
             @Override

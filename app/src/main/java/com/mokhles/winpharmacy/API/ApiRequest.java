@@ -33,7 +33,7 @@ public interface ApiRequest {
 
     /*************** Upload Ordonnance *******************/
     @FormUrlEncoded
-    @POST("uploadOrdonnance.php")
+    @POST("UploadOrdonnance.php")
     Call<ResponseDataModel> UploadOrdonnance(
             @Field("titre") String titre,
             @Field("image") String image,

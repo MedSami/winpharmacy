@@ -51,7 +51,6 @@ public class EnvoyerOrdonnance extends AppCompatActivity {
             idUtilisateur = data.getString("idUtilisateur");
 
         }
-        Toast.makeText(this, idUtilisateur, Toast.LENGTH_SHORT).show();
         btnChoisir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,17 +98,18 @@ public class EnvoyerOrdonnance extends AppCompatActivity {
     private void uploadImage(){
         String image=imageToString();
         String image_titre=TitreImage.getText().toString();
+        //Toast.makeText(this, idUtilisateur+"-"+image_titre+"-"+image, Toast.LENGTH_SHORT).show();
 
-        if(image_titre.equals("")){
+        if(image_titre.equals("")) {
             Toast.makeText(this, "Saisir titre Image", Toast.LENGTH_SHORT).show();
             return;
         }
-
-        ApiRequest api= RetrofitServer.getClient().create(ApiRequest.class);
+              ApiRequest api= RetrofitServer.getClient().create(ApiRequest.class);
         Call<ResponseDataModel> upload=api.UploadOrdonnance(image_titre,image,idUtilisateur);
         upload.enqueue(new Callback<ResponseDataModel>() {
             @Override
             public void onResponse(Call<ResponseDataModel> call, Response<ResponseDataModel> response) {
+
                 if (response.isSuccessful()){
                     Toast.makeText(EnvoyerOrdonnance.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
                     img.setVisibility(View.GONE);
@@ -130,6 +130,7 @@ public class EnvoyerOrdonnance extends AppCompatActivity {
                 Toast.makeText(EnvoyerOrdonnance.this, "Problem Connexion", Toast.LENGTH_SHORT).show();
             }
         });
+
 
     }
 

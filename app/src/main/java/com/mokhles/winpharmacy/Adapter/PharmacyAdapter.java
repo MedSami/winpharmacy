@@ -16,6 +16,7 @@ import com.mokhles.winpharmacy.Model.DataModel;
 import com.mokhles.winpharmacy.R;
 
 import java.util.List;
+import java.util.Locale;
 
 public class PharmacyAdapter extends RecyclerView.Adapter<PharmacyAdapter.ActorViewHolder> {
 
@@ -69,8 +70,12 @@ public class PharmacyAdapter extends RecyclerView.Adapter<PharmacyAdapter.ActorV
                 public void onClick(View v) {
 
                         if(btnClicked.equals("localiser")) {
-                            Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                            /*Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
                                     Uri.parse("http://maps.google.com/maps?saddr=35.6658971,10.0921316&daddr=" + dm.getLatitude() + "," + dm.getLongitude()));
+                            ctx.startActivity(intent);*/
+                            String uri = String.format(Locale.ENGLISH, "http://maps.google.com/maps?daddr=" + dm.getLatitude() + "," + dm.getLongitude());
+                            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                            intent.setPackage("com.google.android.apps.maps");
                             ctx.startActivity(intent);
 
                         }

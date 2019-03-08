@@ -14,12 +14,15 @@ public class RetrofitServer {
     private static final String Base_Url="https://winpharmacy.000webhostapp.com/Pharmacy/";
     private static Retrofit retrofit;
 
+
+
     public static Retrofit getClient(){
         final OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .readTimeout(360, TimeUnit.SECONDS)
                 .connectTimeout(360, TimeUnit.SECONDS)
                 .build();
-        Gson gson = new GsonBuilder()
+
+       Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();
         if (retrofit==null){

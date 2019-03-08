@@ -24,6 +24,7 @@
         android:layout_below="@+id/imageView2"
         android:inputType="textPersonName"
         android:visibility="gone"
+        android:drawableLeft="@drawable/ic_navigate_next_black_24dp"
         android:hint="@string/img_titre"
          />
 
@@ -32,7 +33,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/edtTitre"
-        android:text="Choisir Ordonnance" />
+        android:text="Choisir Ordonnance"
+        android:drawableLeft="@drawable/ic_open_in_browser_black_24dp"/>
 
     <Button
         android:id="@+id/btnUpload"
@@ -40,5 +42,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btnChoisir"
         android:enabled="false"
+        android:drawableLeft="@drawable/ic_file_upload_black_24dp"
         android:text="Envoyer Ordonnance" />
 </RelativeLayout>
