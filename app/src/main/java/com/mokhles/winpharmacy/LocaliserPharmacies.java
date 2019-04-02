@@ -1,7 +1,7 @@
 package com.mokhles.winpharmacy;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
@@ -23,6 +23,9 @@ public class LocaliserPharmacies extends AppCompatActivity {
     private RecyclerView RecycleLayout;
     private RecyclerView.LayoutManager RecycleManager;
     private RecyclerView.Adapter pharmacyAdapter;
+
+
+
 String btnClicked,idUtilisateur;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

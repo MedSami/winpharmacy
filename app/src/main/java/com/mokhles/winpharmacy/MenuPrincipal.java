@@ -1,14 +1,13 @@
 package com.mokhles.winpharmacy;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 public class MenuPrincipal extends AppCompatActivity {
-Button btnLocaliser,btnEnvoyerOrdonnance,btnDemandeConseil;
+Button btnLocaliser,btnEnvoyerOrdonnance,btnDemandeConseil,btnTraitement;
 String idUtilisateur;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,13 +16,20 @@ String idUtilisateur;
 
         btnDemandeConseil=findViewById(R.id.btnDemandeConseil);
         btnEnvoyerOrdonnance=findViewById(R.id.btnEnvoyer);
+        btnTraitement=findViewById(R.id.btnTraitement);
         btnLocaliser=findViewById(R.id.btnLocaliser);
         Bundle data = getIntent().getExtras();
         if (data != null) {
             idUtilisateur = data.getString("idUtilisateur");
 
         }
-
+btnTraitement.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent i=new Intent(MenuPrincipal.this,Traitement.class);
+        startActivity(i);
+    }
+});
         btnDemandeConseil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

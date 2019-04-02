@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DemandeConseil">
+    tools:context=".DemandeConseil"
+    android:background="@drawable/gradient_background">
 
     <TextView
         android:id="@+id/textView"
@@ -16,6 +17,7 @@
         android:text="Votre Question :"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="@color/colorAccent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,6 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Demande Conseil"
+        android:background="@drawable/gradient_button"
         android:drawableLeft="@drawable/ic_check_black_24dp"
         app:layout_constraintEnd_toEndOf="@+id/edtQuestion"
         app:layout_constraintStart_toStartOf="@+id/edtQuestion"

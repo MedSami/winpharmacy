@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DemandeConseil"></activity>
+        <activity android:name=".Traitement"></activity>
+        <activity android:name=".DemandeConseil" />
         <activity android:name=".LocaliserPharmacies" />
         <activity android:name=".EnvoyerOrdonnance" />
         <activity android:name=".MenuPrincipal" />

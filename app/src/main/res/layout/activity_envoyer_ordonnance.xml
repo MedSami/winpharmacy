@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EnvoyerOrdonnance">
+    tools:context=".EnvoyerOrdonnance"
+    android:background="@drawable/gradient_background">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -34,6 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/edtTitre"
         android:text="Choisir Ordonnance"
+        android:background="@drawable/gradient_button"
         android:drawableLeft="@drawable/ic_open_in_browser_black_24dp"/>
 
     <Button
@@ -42,6 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btnChoisir"
         android:enabled="false"
+        android:background="@drawable/gradient_button"
         android:drawableLeft="@drawable/ic_file_upload_black_24dp"
         android:text="Envoyer Ordonnance" />
 </RelativeLayout>

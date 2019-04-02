@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuPrincipal">
+    tools:context=".MenuPrincipal"
+    android:background="@drawable/gradient_background">
 
     <Button
         android:id="@+id/btnLocaliser"
@@ -14,6 +15,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="176dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/gradient_button"
         android:layout_marginRight="8dp"
         android:drawableLeft="@drawable/ic_person_pin_circle_black_24dp"
         android:text="Localiser les pharmacies"
@@ -32,6 +34,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="Envoyer Ordonnance"
+        android:background="@drawable/gradient_button"
         android:drawableLeft="@drawable/ic_send_black_24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,8 +50,25 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="Demande Conseil"
+        android:background="@drawable/gradient_button"
         android:drawableLeft="@drawable/ic_settings_ethernet_black_24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnEnvoyer" />
+
+    <Button
+        android:id="@+id/btnTraitement"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/gradient_button"
+        android:drawableLeft="@drawable/ic_settings_input_svideo_black_24dp"
+        android:text="Traitement convenable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDemandeConseil" />
 </android.support.constraint.ConstraintLayout>
